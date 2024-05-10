@@ -114,3 +114,10 @@ titulo.innerHTML="Práctica de JavaScript";
 cuadrado.innerHTML="A";
 
 document.write("Es una prueba de document.write")
+//variables - 
+var edad="cincuenta y ocho";
+
+let email="j@email.com";
+document.write("<p>"+email+"</p>");
+document.write("<p>"+edad+"</p>");//cuidado con el var!
+
