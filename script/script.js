@@ -5,10 +5,10 @@
  */
 
 
-nombreApellido="Maria Rojas";//tipo de variable String puedes utilizar "" o ''
-edad=25;//tipo Number, no necesita comillas
-espaniol=true//tipo Boolean, solo dos estados (true o false)
-sexo=null;
+nombreApellido = "Maria Rojas";//tipo de variable String puedes utilizar "" o ''
+edad = 25;//tipo Number, no necesita comillas
+espaniol = true//tipo Boolean, solo dos estados (true o false)
+sexo = null;
 
 //¿Como puedes ver los valores sin mostrarlos en el html?
 //Se utiliza para ver la ejecución o valores ->console.log (lo que quieres mostrar)
@@ -18,19 +18,19 @@ console.log(edad);
 console.log(espaniol);
 console.log(sexo);
 //operador de concatenación + une dos o más expresiones de salida
-console.log("nombreApellido->"+typeof(nombreApellido) + " !");
-console.log("edad->"+typeof(edad));
-console.log("espaniol->"+typeof(espaniol));
-console.log("sexo->"+typeof(sexo));
+console.log("nombreApellido->" + typeof (nombreApellido) + " !");
+console.log("edad->" + typeof (edad));
+console.log("espaniol->" + typeof (espaniol));
+console.log("sexo->" + typeof (sexo));
 
-direccion="Calle Campo 81"
+direccion = "Calle Campo 81"
 //Simplificar las cadenas con Backticks
 console.log(`Datos Personales->Nombre:  ${nombreApellido}, Dirección: ${direccion}`);
-console.log("Datos Personales ->Nombre: "+nombreApellido +", Direccción:"+direccion);
+console.log("Datos Personales ->Nombre: " + nombreApellido + ", Direccción:" + direccion);
 
 //Si la variable es númerica, podemos realizar operaciones matemáticas
-console.log("El año que viene cumpliras " + (edad+1) + " años");
-console.log(`El año que viene cumpliras ${edad+1} años`);
+console.log("El año que viene cumpliras " + (edad + 1) + " años");
+console.log(`El año que viene cumpliras ${edad + 1} años`);
 
 console.log('Esta es una frase de Cervante \'En un lugar de la Mancha\'');
 console.log("Esta es una frase de Cervante \"En un lugar de la Mancha\"");
@@ -47,27 +47,27 @@ console.log('El acceso a la ruta C:\\\\usuario\\ tarda 1\'23", algo considerado 
 
 /*Tipos de datos Númericos (number) */
 
-altura=1.80; //tipo de dato numérico es decimal
-diametro=2e-9;
+altura = 1.80; //tipo de dato numérico es decimal
+diametro = 2e-9;
 console.log(`Altura->${altura}`);
 console.log(`Diámetro->${diametro}`);
-resultado=altura/0; //->Infinito
-otroResultado=resultado+10;
+resultado = altura / 0; //->Infinito
+otroResultado = resultado + 10;
 console.log(otroResultado);
 
 //Si tienes otros tipos de datos y quieres hacer una operación matemática-> NaN-> Not a Number
 
-resultado=nombreApellido*25;
+resultado = nombreApellido * 25;
 console.log(resultado); //* / % ** pero con el + siempre concatena
 
-resultado=nombreApellido+" "+edad;
-resultado=`${nombreApellido} ${edad}`;
+resultado = nombreApellido + " " + edad;
+resultado = `${nombreApellido} ${edad}`;
 console.log(resultado);
 
 //Tipo de datos Booleanos (true o false)
 //true ->1 false ->0
-valorVerdadero=true;
-valorFalso=false;
+valorVerdadero = true;
+valorFalso = false;
 
 console.log(`1-¿true?:${Boolean(true)}`);
 console.log(`2-¿false?:${Boolean(false)}`);
@@ -75,49 +75,120 @@ console.log(`3-1: ${Boolean(1)}`);
 console.log(`4-0: ${Boolean(0)}`);
 
 //si existen datos...siempre va a ser true!
-texto="Un texto ejemplo";
+texto = "Un texto ejemplo";
 console.log(`5-texto: ${Boolean(texto)}`);
 
-textoVacio=""
+textoVacio = ""
 console.log(`5-textoVacio: ${Boolean(textoVacio)}`);
 
 //Conversion de tipos//
-masAnios="10"; //tipo de dato es string o cadena...
+masAnios = "10"; //tipo de dato es string o cadena...
 
 console.log(edad + masAnios); //2510
 console.log(edad + Number(masAnios)); //35 ->casting
-console.log(String (edad) + masAnios); //2510
+console.log(String(edad) + masAnios); //2510
 
-console.log(true*7);
-console.log(9-false);
-console.log(9-true);
-console.log(edad*masAnios); //conversion es automatica
-console.log(edad/masAnios); 
-console.log(edad-masAnios);
-console.log(edad**masAnios); //exponencial
-console.log(undefined/edad); //NaN
-console.log(null*edad); //0
+console.log(true * 7);
+console.log(9 - false);
+console.log(9 - true);
+console.log(edad * masAnios); //conversion es automatica
+console.log(edad / masAnios);
+console.log(edad - masAnios);
+console.log(edad ** masAnios); //exponencial
+console.log(undefined / edad); //NaN
+console.log(null * edad); //0
 
 /*--------------------------- */
 
-parrafo=document.getElementById ("parrafo");
-parrafo.innerHTML="Es una prueba de javascrip en el DOM";
+parrafo = document.getElementById("parrafo");
+parrafo.innerHTML = "Es una prueba de javascrip en el DOM";
 //lectura del documento...resultaria vacío
-parrafo.innerHTML="";
+parrafo.innerHTML = "";
 
 
-cuadrado=document.querySelector(".cuadrado");
+cuadrado = document.querySelector(".cuadrado");
 // parrafo=document.querySelector("#parrafo");
-titulo=document.querySelector("h1");
+titulo = document.querySelector("h1");
 
-titulo.innerHTML="Práctica de JavaScript";
-cuadrado.innerHTML="A";
+titulo.innerHTML = "Práctica de JavaScript";
+cuadrado.innerHTML = "A";
 
 document.write("Es una prueba de document.write")
 //variables - 
-var edad="cincuenta y ocho";
+var edad = "cincuenta y ocho";
 
-let email="j@email.com";
-document.write("<p>"+email+"</p>");
-document.write("<p>"+edad+"</p>");//cuidado con el var!
+let email = "j@email.com";
+document.write("<p>" + email + "</p>");
+document.write("<p>" + edad + "</p>");//cuidado con el var!
+
+
+
+/*let */
+/*******Ámbito de bloque*********/
+// let mensaje1 = "Mensaje1"; //declaramos mensaje
+// function mostrarMensaje2() { //funcion -> actua como un bloque
+//     let mensaje1 = "<br>Mensaje dentro del Bloque";
+//     document.write(mensaje1);
+// }
+// mostrarMensaje2();
+// document.write("<br>mensaje fuera->" + mensaje1);
+
+
+
+/*var */
+/******Ámbito de bloque*******/
+// document.write("<br>*****************");
+// var mensaje = "Mensaje1";
+// function mostrarMensaje() {
+//     mensaje = "<br>Mensaje dentro del Bloque";
+//     document.write(mensaje);
+// }
+// mostrarMensaje();
+// document.write("<br>mensaje fuera->" + mensaje1);
+
+
+//********Constantes********/
+// const IVA=21;
+// let precio=50*((IVA/100)+1);
+// document.write("<br>El precio final es " + precio);
+
+// precio=105*((iva/100)+1);
+// document.write("<br>El precio final es " + precio);
+
+
+//******salidas por consola*****//
+// console.error("aquí hay un error");
+// console.info("Es una información");
+// console.warn("Es una notificación importante");
+// console.log('%c mensaje con estilo', 'font-size: 36px; font-weight:bold; colo:blue');
+
+
+
+
+//***salidas de mensajes***//
+
+// alert("Es una alerta");
+//  document.write("prueba...prueba...prueba")
+
+//mensajes de confirmación (si/no..true/false)//
+//mensaje de entrada de datos//
+
+
+
+
+//****Actividad 2.5******/
+//1
+nombreApellido=prompt("Escribe tu nombre completo");
+document.write(`<br>El nuevo nombre es ->${nombreApellido}`);
+
+//2
+let confirmacion=confirm("Quieres salir del programa");
+document.write(`<br>El usuario quiere salir?->${confirmacion}`);
+ if(confirmacion){
+ window.location.replace("https://google.es")
+}else{ alert("finalmente se queda en la web")
+}
+
+//4
+console.log('%c FIN DEL PROGRAMA', ' font-weight: bold; color:blue; text-decoration:underline');
 
