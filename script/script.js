@@ -101,4 +101,16 @@ console.log(null*edad); //0
 /*--------------------------- */
 
 parrafo=document.getElementById ("parrafo");
-parrafo.innerHTML="Es una prueba de javascrip en el DOM"
+parrafo.innerHTML="Es una prueba de javascrip en el DOM";
+//lectura del documento...resultaria vacío
+parrafo.innerHTML="";
+
+
+cuadrado=document.querySelector(".cuadrado");
+// parrafo=document.querySelector("#parrafo");
+titulo=document.querySelector("h1");
+
+titulo.innerHTML="Práctica de JavaScript";
+cuadrado.innerHTML="A";
+
+document.write("Es una prueba de document.write")
