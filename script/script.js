@@ -98,3 +98,7 @@ console.log(edad**masAnios); //exponencial
 console.log(undefined/edad); //NaN
 console.log(null*edad); //0
 
+/*--------------------------- */
+
+parrafo=document.getElementById ("parrafo");
+parrafo.innerHTML="Es una prueba de javascrip en el DOM"
