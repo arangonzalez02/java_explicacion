@@ -101,14 +101,15 @@ console.log(null * edad); //0
 /*--------------------------- */
 
 parrafo = document.getElementById("parrafo");
+// parrafo = document.querySelectorAll("p"); //Arrays
 parrafo.innerHTML = "Es una prueba de javascrip en el DOM";
 //lectura del documento...resultaria vacío
 parrafo.innerHTML = "";
 
 
-cuadrado = document.querySelector(".cuadrado");
-// parrafo=document.querySelector("#parrafo");
-titulo = document.querySelector("h1");
+cuadrado = document.querySelector(".cuadrado"); //clase
+// parrafo=document.querySelector("#parrafo"); //id-->solo el primero cuando existan varios
+titulo = document.querySelector("h1"); //etiqueta
 
 titulo.innerHTML = "Práctica de JavaScript";
 cuadrado.innerHTML = "A";
@@ -178,17 +179,110 @@ document.write("<p>" + edad + "</p>");//cuidado con el var!
 
 //****Actividad 2.5******/
 //1
-nombreApellido=prompt("Escribe tu nombre completo");
+nombreApellido = prompt("Escribe tu nombre completo");
 document.write(`<br>El nuevo nombre es ->${nombreApellido}`);
 
 //2
-let confirmacion=confirm("Quieres salir del programa");
+let confirmacion = confirm("Quieres salir del programa");
 document.write(`<br>El usuario quiere salir?->${confirmacion}`);
- if(confirmacion){
- window.location.replace("https://google.es")
-}else{ alert("finalmente se queda en la web")
+if (confirmacion) {
+    window.location.replace("https://google.es")
+} else {
+    alert("finalmente se queda en la web")
 }
 
 //4
 console.log('%c FIN DEL PROGRAMA', ' font-weight: bold; color:blue; text-decoration:underline');
+
+
+
+/*Actividad propuesta 2.5 */
+//Operados
+//1.Asignación
+let a=5
+let b=a;
+console.log("El valor de b es " + b);
+
+
+a=a+b //o de forma simplifacada
+console.log("El valor del primer a->"+ a);//el resultado es 10
+
+a+=b; //el valor de a se le suma otra vez su valor + el valor de b
+//10+5
+console.log("El valor del segundo a -> "+ a);
+
+let c=a%b; //modulo 0 porque a=15 b=5 =3 resto 0
+console.log("El valor de c es ->" + c);
+
+let d=b**4;
+console.log("El valor de d es ->"+ d);
+
+//Operadores de comparación ->solo dan como resultado true o false
+//Igual
+let respuesta=a==b; //false
+console.log(respuesta);
+
+//Distinto
+respuesta=a!=b; //true
+console.log(respuesta);
+
+//Igualdad estricta
+let e="5"; //string
+respuesta=b==e;
+console.log(respuesta);
+//da true porque los dos valen 5
+
+respuesta=b===e;
+console.log(respuesta);
+//en el caso de igualdad estricta resulta falso porque b es number y e es string
+
+
+//Desigualdad estricta
+respuesta=b!==e;//b no es igual que e en valor o en tipo
+console.log(respuesta); //true
+
+//Mayor | Menor | Mayor o igual | Menor o igual
+
+respuesta=a>b;//true
+respuesta=c>b;//true
+respuesta=b>=e;//compara sus valores!
+console.log(respuesta);
+
+a++; //a vale 16 -> a=a+1
+console.log("Ahora a vale ->" + a);
+a--; //a vale 15
+console.log(respuesta);
+a-=3; //a vale 12
+console.log(respuesta);
+
+
+console.log("Operaciones con AND");
+console.log(`1. => ${true&&true}`);
+console.log(`3. => ${true&&false}`);
+console.log(`4. => ${false&&true}`);
+console.log(`5. => ${false&&false}`);
+
+//Evaluamos condiciones
+console.log(`6. => ${4>5 && 3>5}`);
+console.log(`6. => ${4<=5 && 3<=5}`);
+
+
+console.log("Operaciones con OR");
+console.log(`1. => ${true||true}`);
+console.log(`3. => ${true||false}`);
+console.log(`4. => ${false||true}`);
+console.log(`5. => ${false||false}`);
+
+
+console.log("Operaciones con NOT");
+console.log(`1.=> ${!true}`);
+console.log(`2.=> ${!false}`);
+
+
+//Ejemplo práctico
+let edadNueva=18;
+let matriculado=true;
+resultado=edadNueva&&matriculado;//true
+console.log(resultado);
+
 
