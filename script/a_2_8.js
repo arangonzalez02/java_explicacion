@@ -4,8 +4,8 @@ let boton=document.querySelector(".boton");
 //javascript los eventos
 
 boton.addEventListener("click", function(){
-    let nombre=document.querySelector("#nombre").ariaValueMax;
-    let edad=document.querySelector("#edad").ariaValueMax;
+    let nombre=document.querySelector("#nombre").value;
+    let edad=document.querySelector("#edad").value;
     //nos trae el valor que se ha escrito en el formulario
    let mensaje;
    if (edad<=12){
@@ -17,5 +17,6 @@ boton.addEventListener("click", function(){
    }else{
     mensaje="jubilado"
    }
-   document.querySelector("mensaje").innerHTML=`${nombre} tiene ${edad} años y es ${mensaje}`
+   document.querySelector(".mensaje").innerHTML=`${nombre} tiene ${edad} años y es ${mensaje}`
 })
+
