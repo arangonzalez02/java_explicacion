@@ -199,79 +199,79 @@ console.log('%c FIN DEL PROGRAMA', ' font-weight: bold; color:blue; text-decorat
 /*Actividad propuesta 2.5 */
 //Operados
 //1.Asignación
-let a=5
-let b=a;
+let a = 5
+let b = a;
 console.log("El valor de b es " + b);
 
 
-a=a+b //o de forma simplifacada
-console.log("El valor del primer a->"+ a);//el resultado es 10
+a = a + b //o de forma simplifacada
+console.log("El valor del primer a->" + a);//el resultado es 10
 
-a+=b; //el valor de a se le suma otra vez su valor + el valor de b
+a += b; //el valor de a se le suma otra vez su valor + el valor de b
 //10+5
-console.log("El valor del segundo a -> "+ a);
+console.log("El valor del segundo a -> " + a);
 
-let c=a%b; //modulo 0 porque a=15 b=5 =3 resto 0
+let c = a % b; //modulo 0 porque a=15 b=5 =3 resto 0
 console.log("El valor de c es ->" + c);
 
-let d=b**4;
-console.log("El valor de d es ->"+ d);
+let d = b ** 4;
+console.log("El valor de d es ->" + d);
 
 //Operadores de comparación ->solo dan como resultado true o false
 //Igual
-let respuesta=a==b; //false
+let respuesta = a == b; //false
 console.log(respuesta);
 
 //Distinto
-respuesta=a!=b; //true
+respuesta = a != b; //true
 console.log(respuesta);
 
 //Igualdad estricta
-let e="5"; //string
-respuesta=b==e;
+let e = "5"; //string
+respuesta = b == e;
 console.log(respuesta);
 //da true porque los dos valen 5
 
-respuesta=b===e;
+respuesta = b === e;
 console.log(respuesta);
 //en el caso de igualdad estricta resulta falso porque b es number y e es string
 
 
 //Desigualdad estricta
-respuesta=b!==e;//b no es igual que e en valor o en tipo
+respuesta = b !== e;//b no es igual que e en valor o en tipo
 console.log(respuesta); //true
 
 //Mayor | Menor | Mayor o igual | Menor o igual
 
-respuesta=a>b;//true
-respuesta=c>b;//true
-respuesta=b>=e;//compara sus valores!
+respuesta = a > b;//true
+respuesta = c > b;//true
+respuesta = b >= e;//compara sus valores!
 console.log(respuesta);
 
 a++; //a vale 16 -> a=a+1
 console.log("Ahora a vale ->" + a);
 a--; //a vale 15
 console.log(respuesta);
-a-=3; //a vale 12
+a -= 3; //a vale 12
 console.log(respuesta);
 
 
 console.log("Operaciones con AND");
-console.log(`1. => ${true&&true}`);
-console.log(`3. => ${true&&false}`);
-console.log(`4. => ${false&&true}`);
-console.log(`5. => ${false&&false}`);
+console.log(`1. => ${true && true}`);
+console.log(`3. => ${true && false}`);
+console.log(`4. => ${false && true}`);
+console.log(`5. => ${false && false}`);
 
 //Evaluamos condiciones
-console.log(`6. => ${4>5 && 3>5}`);
-console.log(`6. => ${4<=5 && 3<=5}`);
+console.log(`6. => ${4 > 5 && 3 > 5}`);
+console.log(`6. => ${4 <= 5 && 3 <= 5}`);
 
 
 console.log("Operaciones con OR");
-console.log(`1. => ${true||true}`);
-console.log(`3. => ${true||false}`);
-console.log(`4. => ${false||true}`);
-console.log(`5. => ${false||false}`);
+console.log(`1. => ${true || true}`);
+console.log(`3. => ${true || false}`);
+console.log(`4. => ${false || true}`);
+console.log(`5. => ${false || false}`);
 
 
 console.log("Operaciones con NOT");
@@ -280,9 +280,45 @@ console.log(`2.=> ${!false}`);
 
 
 //Ejemplo práctico
-let edadNueva=18;
-let matriculado=true;
-resultado=edadNueva&&matriculado;//true
+let edadNueva = 18;
+let matriculado = true;
+resultado = edadNueva && matriculado;//true
 console.log(resultado);
 
+
+//Operario ternario
+
+resultado = a > b ? "A es mayor que B" : "B es mayor que A";
+console.log(resultado);
+
+//ejercicio: solicita por promt la edad e indica por un alert si es mayor o menos de edad
+
+// edadNueva=prompt("Indica tu edad");
+// resultado=edadNueva>=18?"Eres Mayor de Edad":"Eres menor de edad";
+// alert(resultado);
+
+edadNueva >= 18 ? edadNueva++ : edadNueva--;
+console.log(edadNueva);
+
+
+//Estructura condicional if - else
+console.log("Inicio");
+let local = 2;
+let visitante = 1;
+if (local === visitante) {
+    console.log("Hay empate");
+}
+else {
+    console.log("No hay empate");
+}
+console.log("Fin");
+
+//Estructura condicionales con if else if
+if (local === visitante) {
+    console.log("Hay empate");
+} else if (local > visitante) {
+    console.log("Gana equipo Local");
+} else {
+    console.log("Gana equipo visitante");
+}
 
