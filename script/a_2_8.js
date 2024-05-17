@@ -22,17 +22,18 @@ boton.addEventListener("click", function () {
     //validación de datos de entrada
     if (edad < 0 || edad == "") {
         msnError = "Ingrese una edad correcta";
+        document.querySelector("#edad").value="";
         error = true;
     } if (nombre == "") {
         msnError += "<br>Ingrese un nombre";
         error = true;
     }
     if (error) {
-        document.querySelector(".mensaje").innerHTML = "";
+        document.querySelector(".mensaje").innerHTML = ""; 
         document.querySelector(".mensajeError").innerHTML = `${msnError}`;
     }
     else {
-        document.querySelector(".mensaje").innerHTML = "";
+        document.querySelector(".mensajeError").innerHTML = ""; //borrar contenido
         document.querySelector(".mensaje").innerHTML = `${nombre} tiene ${edad} años y es ${mensaje}`
     }
 })
